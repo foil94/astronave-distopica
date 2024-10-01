@@ -1,0 +1,123 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stili di base per body e html */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita lo scrolling */
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Menu iniziale e schermata di fine gioco */
+#menu, #gameOver {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#menu.active, #gameContainer.active, #gameOver.active {
+    display: flex;
+}
+
+#menu button, #gameOver button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Contenitore del gioco */
+#gameContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+}
+
+/* Punteggio */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+/* Messaggio di pausa */
+#pauseMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #fff;
+    display: none;
+    z-index: 1;
+}
+
+/* Stili per la schermata di fine gioco */
+#gameOver {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameOver h2, #gameOver p, #gameOver button {
+    margin: 10px 0;
+    text-align: center;
+}
+
+#nameInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#nameInputContainer p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#nameInputContainer input {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+#nameInputContainer button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#gameOver ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#gameOver li {
+    font-family: monospace;
+    margin: 5px 0;
+    color: #fff;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <title>Astronave Distopica</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="menu" class="active">
+        <h1>Astronave nel Futuro Distopico</h1>
+        <button id="startBtn">Nuova Partita</button>
+        <button id="exitBtn">Esci</button>
+    </div>
+
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="score">Punteggio: 0</div>
+        <div id="pauseMessage">PAUSA</div>
+    </div>
+
+    <div id="gameOver">
+        <h2>Game Over</h2>
+        <p id="finalScore"></p>
+        <div id="nameInputContainer">
+            <p>Inserisci il tuo nome (3 lettere, A-Z):</p>
+            <input type="text" id="playerName" maxlength="3" placeholder="ABC" />
+            <button id="submitNameBtn">OK</button>
+        </div>
+        <div id="highScoresList"></div>
+        <button id="returnMenuBtn">Torna al Menu</button>
+    </div>
+
+    <!-- Includi solo main.js come modulo -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
