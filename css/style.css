@@ -42,6 +42,7 @@ body, html {
     width: 100%;
     height: 100%;
     display: none;
+    cursor: crosshair; /* Puoi scegliere il cursore che preferisci */
 }
 
 canvas {

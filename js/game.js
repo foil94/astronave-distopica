@@ -30,13 +30,13 @@ export function startGame() {
     // Resetta il campo di inserimento del nome
     playerNameInput.value = "";
     nameInputContainer.style.display = "none";
-    
+
     isPaused = false; // Assicurati che il gioco non sia in pausa
     pauseMessage.style.display = "none"; // Nascondi il messaggio di pausa
 
     init();
     enemyInterval = setInterval(createEnemy, 1000);
-    powerUpInterval = setInterval(createPowerUp, 5000);
+    powerUpInterval = setInterval(createPowerUp, 15000);
     update();
 }
 
@@ -67,7 +67,7 @@ function update() {
     // Pulisci il canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Muovi l'astronave
+    // Muovi l'astronave solo se si utilizza la tastiera
     spaceship.x += spaceship.dx;
 
     // Impedisci all'astronave di uscire dai bordi
